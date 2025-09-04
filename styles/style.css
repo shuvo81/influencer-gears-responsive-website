@@ -96,6 +96,7 @@ section{
 /* Navbar-related styles */
 .nav{
     justify-content: space-between;
+    align-items: center;
 }
 .nav .brand{
     font-size: 1.5rem;
@@ -106,10 +107,12 @@ section{
     font-size: 1rem;
     font-weight: 600;
 }
-.nav .nav-links{
+.nav-links{
     gap: 30px;
+    align-items: center;
+
 }
-.nav .nav-links a{
+.nav-links a{
     text-decoration: none;
 }
 .nav li img{
@@ -142,13 +145,14 @@ section{
 }
 .banner-media{
     background-image: url(../images/Circle\ design.svg);
+    background-repeat: no-repeat;
     width: 475px;
     height: 475px;
 }
 .banner-media img{
     width: 440px;
     height: 414px;
-}
+} 
 
 
 
@@ -167,9 +171,6 @@ section{
     border-bottom: 1px solid #ddd;
 }
 
-
-
-
 /* Popular collection styles */
 .popular-collection{
     padding: 0  196px;
@@ -186,8 +187,6 @@ section{
     
 }
 .card{
-    /* width: 329px;
-    height: 476px; */
     margin: 0 auto;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
     padding: 14px;
@@ -241,4 +240,96 @@ section{
     border-radius: 50%;
 }
 
-/* Responsive media query */
+    
+
+/* Mobile Responsive media query */
+@media screen and (max-width: 576px){
+    .header
+    {
+        padding: 0px;
+    }
+
+    .nav,
+    .nav-links,
+    .feature-product
+    {
+        flex-direction: column;
+    }
+
+    .banner
+    {
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+    .banner-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .banner-title{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .banner-description{
+        font-size: 14px;
+    }
+
+    .brands{
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+    }
+    .sponsors {
+        padding: 0px;
+        border: none;
+    }
+    .popular-collection{
+        padding: 0;
+    }
+
+    .cards-list{
+        
+        grid-template-columns: 1fr;
+        
+    }
+    .feature-product{
+        padding: 0px;
+        display: flex;
+        gap: 4rem;
+    }
+
+} 
+
+/* Tablet device responsive */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .header {
+        padding: 0 20px;
+    }
+    .banner
+    {
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+    .banner-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .sponsors {
+        padding: 0px 20px;
+    }
+
+    .popular-collection {
+        padding: 0 20px;
+    }
+    .feature-product{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .feature-media img{
+        width: 100%;
+    }
+
+}
