@@ -196,6 +196,15 @@ section{
 .card img{
     width: 100%;
 }
+.card-title{
+    margin: 10px 0;
+}
+.price{
+    margin: 8px 0;
+}
+.product-rating{
+    margin: 8px 0;
+}
 .card .fa-star, .fa-star-half-stroke{
     color: rgb(242, 165, 12);
     width: 16px;
@@ -262,21 +271,21 @@ section{
     }
 
     .nav,
-    .nav-links,
-    .feature-product
+    .nav-links
     {
         flex-direction: column;
     }
 
-    .banner
+    .banner,
+    .feature-product
     {
         justify-content: center;
         flex-direction: column-reverse;
         gap: 14px;
+        text-align: center;
     }
     .banner-content {
         max-width: 100%;
-        text-align: center;
         padding: 0;
     }
     .banner-title{
@@ -307,7 +316,6 @@ section{
     }
     .feature-product{
         padding: 0px;
-        display: flex;
         gap: 4rem;
     }
 
@@ -318,12 +326,16 @@ section{
     .header {
         padding: 0 20px;
     }
-    .banner
+
+    .banner,
+    .feature-product
     {
         justify-content: center;
         flex-direction: column-reverse;
         gap: 14px;
+        text-align: center;
     }
+
     .banner-content {
         max-width: 100%;
         text-align: center;
